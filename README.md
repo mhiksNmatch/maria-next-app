@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+PROJECT STRUCTURE
+.
+├── app/
+│   └── page.tsx              # Main entry page that renders all components
+├── components/
+│   ├── WelcomeCard.tsx       # Welcome message card component
+│   ├── Counter.tsx           # Interactive counter component
+│   └── StudentInfo.tsx       # Form to collect student name
+├── styles/
+│   └── globals.css           # Global styles for the app
 
-## Getting Started
+Components
+WelcomeCard.tsx
+A reusable card component that displays a welcome message.
+.tsx
+interface WelcomeCardProps {
+  message: string;
+}
+Props:
+message: A string passed to display inside the card.
+Usage: Used on the home page to show a greeting or title.
+Style: Styled with a pink background, centered text, and rounded corners.
 
-First, run the development server:
+Counter.tsx
+A simple stateful component that shows a counter with an increment button.
+State:
+count: Tracks the current number.
+Interaction:
+Clicking the Increment button increases the counter.
+Usage: Demonstrates React useState() for interactive UI.
+Style: Light red background, padding, and rounded corners.
 
-```bash
+StudentInfo.tsx
+A form to collect and display the student’s name.
+State:
+name: Stores the typed name.
+Features:
+Text input for the name.
+Submit button shows the name in an alert.
+Usage: Demonstrates form handling with controlled components in React.
+Style: Flexbox layout with pink-themed inputs and button.
+
+Styling (globals.css)
+Theme: Pink pastel tones with hot pink accents.
+Typography: Uses Arial for clean, soft look.
+Responsiveness: All components use flex layout for vertical alignment.
+
+Card Styling:
+border-radius for rounded edges.
+Background shades of pink to match the aesthetic.
+
+How to Run:
+Install dependencies:
+npm install
+Start the development server:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open in browser:
+http://localhost:3000
